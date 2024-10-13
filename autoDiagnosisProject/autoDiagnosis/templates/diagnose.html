@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Analize Data</h1>
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Get Prediction</button>
+</form>
+<a class="btn btn-secondary" href="{% url 'data_list' %}">Back to Data List</a>
+{% endblock %}

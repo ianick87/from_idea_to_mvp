@@ -1,0 +1,6 @@
+name,age,gender,weight,height,temperature,pulse,blood_pressure,headache,stomach_pain,throat_pain,has_disease
+John Doe,45,M,72.5,1.78,36.6,75,120/80,True,False,False,False
+Jane Smith,34,F,60.3,1.65,37.0,80,110/70,False,True,True,True
+Alice Johnson,29,F,68.0,1.70,38.2,85,130/85,True,True,False,True
+Bob Lee,50,M,85.4,1.82,37.1,72,125/82,False,False,True,False
+Carol King,60,F,75.5,1.60,36.5,90,140/90,True,False,True,True

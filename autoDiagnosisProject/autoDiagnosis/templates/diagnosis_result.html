@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Diagnosis Result for {{ data_name }}</h1>
+{% if prediction %}
+<div class="alert alert-danger">The data is predicted POSITIVE.</div>
+{% else %}
+<div class="alert alert-success">The data is predicted NEGATIVE.</div>
+{% endif %}
+<p>Confidence Level: {{ confidence|floatformat:2 }}%</p>
+<a class="btn btn-primary" href="{% url 'diagnose' %}">Analyze Another Record</a>
+<a class="btn btn-secondary" href="{% url 'data_list' %}">Back to Data List</a>
+{% endblock %}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.12 (from_idea_to_mvp)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="from_idea_to_mvp_old" project-jdk-type="Python SDK" />
+</project>

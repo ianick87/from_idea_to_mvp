@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ data.name }}</h1>
+<ul>
+    <li>Age: {{ data.age }}</li>
+    <li>Gender: {{ data.gender }}</li>
+    <li>Weight: {{ data.weight }} kg</li>
+    <li>Height: {{ data.height }} m</li>
+    <li>Temperature: {{ data.temperature }} °C</li>
+    <li>Pulse: {{ data.pulse }} bpm</li>
+    <li>Blood Pressure: {{ data.blood_pressure }}</li>
+    <li>Headache: {{ data.headache }}</li>
+    <li>Stomach Pain: {{ data.stomach_pain }}</li>
+    <li>Throat Pain: {{ data.throat_pain }}</li>
+    <li>Has Disease: {{ data.has_disease }}</li>
+</ul>
+<a class="btn btn-primary" href="{% url 'data_edit' data.pk %}">Edit</a>
+<a class="btn btn-secondary" href="{% url 'data_list' %}">Back to List</a>
+{% endblock %}

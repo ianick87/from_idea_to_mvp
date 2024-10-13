@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Model Training Results</h1>
+
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% else %}
+<div class="alert alert-success">
+    <p>Model trained successfully!</p>
+    <p><strong>Accuracy:</strong> {{ accuracy|floatformat:2 }}</p>
+    <p><strong>Precision:</strong> {{ precision|floatformat:2 }}</p>
+    <p><strong>Recall:</strong> {{ recall|floatformat:2 }}</p>
+    <p><strong>F1 Score:</strong> {{ f1_score|floatformat:2 }}</p>
+
+    <h3>Confusion Matrix</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Predicted Negative</th>
+                <th>Predicted Positive</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Actual Negative</td>
+                <td>{{ confusion_matrix.0.0 }}</td>
+                <td>{{ confusion_matrix.0.1 }}</td>
+            </tr>
+            <tr>
+                <td>Actual Positive</td>
+                <td>{{ confusion_matrix.1.0 }}</td>
+                <td>{{ confusion_matrix.1.1 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+<a class="btn btn-primary" href="{% url 'data_list' %}">Back to Data List</a>
+{% endblock %}
