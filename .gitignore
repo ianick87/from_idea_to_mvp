@@ -107,6 +107,7 @@ desktop.ini
 .env
 .venv
 env/
+venv
 venv/
 ENV/
 env.bak/
